@@ -25,11 +25,11 @@ async function fetchRecentNews() {
     const res = await fetch(url);
     const data = await res.json();
     if (data.status !== "ok") throw new Error(data.message);
-    console.log("取得したニュース:", data.articles);
+    //console.log("取得したニュース:", data.articles);
 
     return data.articles;
   } catch (e) {
-    console.error("ニュース取得エラー:", e);
+    //console.error("ニュース取得エラー:", e);
     return [];
   }
 }
@@ -43,11 +43,11 @@ const cityList = ["Tokyo",  "Jerusalem",
 function extractCity(text) {
   for (const city of cityList) {
     if (text.includes(city)) {
-        console.log(`都市名検出: ${city}`);
+        //console.log(`都市名検出: ${city}`);
         return city;
     }
   }
-  console.log("都市名が見つかりませんでした:", text);
+  //console.log("都市名が見つかりませんでした:", text);
   return null;
 }
 
@@ -86,7 +86,7 @@ async function loadNewsAndAddMarkers() {
       const latlng = await geocodeCity(city);
       if (!latlng) continue;
   
-      console.log("マーカー追加:", latlng, article.title);
+      //console.log("マーカー追加:", latlng, article.title);
   
       L.marker(latlng)
         .addTo(map)
