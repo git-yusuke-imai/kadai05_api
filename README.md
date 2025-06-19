@@ -5,7 +5,7 @@ World News Search
 - APIで取得したニュースを地図上に表示＆世界の天気を表示
 
 ## ③アプリのデプロイURL
-デプロイしている場合はURLを記入（任意）
+https://git-yusuke-imai.github.io/kadai05_api/
 
 ## ④アプリのログイン用IDまたはPassword（ある場合）
 - ID: なし
