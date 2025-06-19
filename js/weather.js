@@ -43,7 +43,6 @@ async function fetchAllWeather() {
 
 // 天気情報をHTMLに表示
 function displayWeather(displayName,data) {
-  //const name = data.name;
   const temp = data.main.temp;
   const weather = data.weather[0].description;
   const icon = data.weather[0].icon;
