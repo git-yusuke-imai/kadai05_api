@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Meiryo', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header, footer {
+    height: 80px;
+    background-color: rgb(245, 55, 55);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 160px);
+  }
+  
+  .map-area {
+    flex: 1;
+    background-color: #f2efea;
+    min-height: 300px;
+  }
+  
+  
+  
+  
+  
+  #map {
+    height: 100%;
+  }
+
+
+  .weather-title {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+
+  .weather-info {
+    width: 100%;
+    padding: 16px;
+    overflow-y: auto;
+    background-color: #f2efea;
+  }
+  
+  .weather-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center; /* 横中央寄せ */
+  }
+  
+  .weather-item {
+    flex: 0 0 180px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 600px) {
+    .weather-item {
+      flex: 1 1 100%;
+    }
+  }
+
+  /* モバイル向けに制限付きの高さ */
+@media (max-width: 768px) {
+  .weather-info {
+    max-height: 300px; /* 必要に応じて調整 */
+  }
+}
